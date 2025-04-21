@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adityapandey-dev.github.io/sitemap.xml
