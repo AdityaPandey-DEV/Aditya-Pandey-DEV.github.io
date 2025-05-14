@@ -110,6 +110,6 @@ jobs:
         run: |
           for ENGINE in "https://www.google.com/ping?sitemap=" "https://www.bing.com/webmaster/ping.aspx?siteMap=" "https://webmaster.yandex.com/ping?sitemap="
           do
-            curl -s "${ENGINE}https://adityapandey-dev.github.io/sitemap.xml"
+            curl -s "${ENGINE}https://aditya-pandey-dev.github.io/sitemap.xml"
             sleep 2
           done
