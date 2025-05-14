@@ -36,23 +36,17 @@ jobs:
           import xml.etree.ElementTree as ET
           from datetime import datetime
           
-          # Register the namespace
           ET.register_namespace('', "http://www.sitemaps.org/schemas/sitemap/0.9")
-          
-          # Define the sections you want to include
           sections = ["about", "skills", "education", "projects", "certifications", "contact"]
           
           try:
-              # Parse the existing sitemap
               tree = ET.parse('sitemap.xml')
               root = tree.getroot()
               
-              # Clear existing URLs
               for url in root.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'):
                   root.remove(url)
               
-              # Add main URL
-              main_url = "https://adityapandey-dev.github.io/"
+              main_url = "https://aditya-pandey-dev.github.io/"
               main_url_elem = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
               
               loc = ET.SubElement(main_url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
@@ -67,9 +61,7 @@ jobs:
               priority = ET.SubElement(main_url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}priority')
               priority.text = "1.0"
               
-              # Add section URLs
               today = datetime.now().strftime('%Y-%m-%d')
-              
               for section in sections:
                   url_elem = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
                   
@@ -85,7 +77,6 @@ jobs:
                   priority = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}priority')
                   priority.text = "0.7"
               
-              # Write the enhanced sitemap
               tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
               print("Sitemap generated successfully!")
               
