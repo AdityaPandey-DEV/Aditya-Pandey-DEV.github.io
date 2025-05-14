@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: /search
 Allow: /
-Sitemap:
-https://aditya-pandey-dev.github.io/sitemap.xml
+Sitemap: https://aditya-pandey-dev.github.io/sitemap.xml
