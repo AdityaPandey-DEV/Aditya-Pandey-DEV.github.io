@@ -20,7 +20,7 @@ jobs:
       - name: Generate base sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://adityapandey-dev.github.io/
+          base-url-path: https://aditya-pandey-dev.github.io/
           path-to-root: .
           include-html: true
           additional-extensions: ""
